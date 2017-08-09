@@ -20,13 +20,15 @@ app.get("/", function (request, response) {
 
 app.get("/api/whoami/",function(req,res){
   var myJson={
-    
+    "ipaddress":req.headers["x-forwarded-for"],
+    "language": req.headers["accept-language"],
+    "software":req.headers["user-agent"]
     
   }
   
   
   res.writeHead(200,{"Content-Type":"text/plain"})
-  res.end(JSON.stringify(req.headers))
+  res.end(JSON.stringify(myJson))
 })
 
 // listen for requests :)

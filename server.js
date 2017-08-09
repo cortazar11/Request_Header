@@ -18,12 +18,11 @@ app.get("/", function (request, response) {
 
 
 
-app.use("/app/whoami/",function(req,res){
-  
+app.get("/api/whoami/",function(req,res){
+  var ip=req.ip
   
   res.writeHead(200,{"Content-Type":"text/plain"})
-  res.end("Hello world")
- 
+  res.end(req.)
 })
 
 // listen for requests :)

@@ -18,9 +18,12 @@ app.get("/", function (request, response) {
 
 
 
-app.get("/api/whoami/",function(req,res){
+app.use("/app/whoami/",function(req,res){
+  
+  
   res.writeHead(200,{"Content-Type":"text/plain"})
-  res.end("Hello World!")
+  res.end("Hello world")
+ 
 })
 
 // listen for requests :)

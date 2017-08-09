@@ -19,10 +19,14 @@ app.get("/", function (request, response) {
 
 
 app.get("/api/whoami/",function(req,res){
+  var myJson={
+    
+    
+  }
   
   
   res.writeHead(200,{"Content-Type":"text/plain"})
-  res.end(JSON.stringify(req.headers["user-agent"]))
+  res.end(JSON.stringify(req.headers))
 })
 
 // listen for requests :)

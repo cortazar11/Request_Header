@@ -19,10 +19,10 @@ app.get("/", function (request, response) {
 
 
 app.get("/api/whoami/",function(req,res){
-  var ip=req.ip
+  
   
   res.writeHead(200,{"Content-Type":"text/plain"})
-  res.end(req.)
+  res.end(JSON.stringify(req.headers))
 })
 
 // listen for requests :)

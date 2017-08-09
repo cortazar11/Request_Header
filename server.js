@@ -22,7 +22,7 @@ app.get("/api/whoami/",function(req,res){
   
   
   res.writeHead(200,{"Content-Type":"text/plain"})
-  res.end(JSON.stringify(req.headers))
+  res.end(JSON.stringify(req.headers["user-agent"]))
 })
 
 // listen for requests :)
